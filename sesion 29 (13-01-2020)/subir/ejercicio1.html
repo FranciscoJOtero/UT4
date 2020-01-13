@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style1.css">
+        <title> Sesion 29 13-01-2020 </title>
+    </head>
+    <body>
+        <h2> VIDEO </h2>
+        <video id="video1" width="600" height="400" autoplay="autoplay" controls loop="loop"> 
+            <source src="../video/OstiaPelotes.mp4" type="video/mp4"> 
+            <source src="../video/OstiaPelotes.ogg" type="video/ogg"> 
+            <source src="../video/OstiaPelotes.webm" type="video/webm"> 
+            Tu navegador no soporta esta etiqueta HTML5 
+        </video>
+
+        <div> 
+            <button onclick="document.getElementById('video1').play()">Reproducir el Vídeo</button> 
+            <button onclick="document.getElementById('video1').pause()">Pausar el Vídeo</button> 
+            <button onclick="document.getElementById('video1').volume+=0.1">Aumentar el Volumen del Vídeo</button>
+            <button onclick="document.getElementById('video1').volume-=0.1">Disminuir el Volumen del Vídeo</button> 
+        </div>
+    </body>
+</html>
