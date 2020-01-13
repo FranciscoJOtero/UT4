@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style1.css">
+        <title> Ejercicio 2 Sesion 29 </title>
+        <script>
+
+            function dibujarLinea() {
+
+                var canvasvar1 = document.getElementById("canvas1"); 
+                var contexto1 = canvasvar1.getContext("2d"); 
+                contexto1.moveTo(0, 0); 
+                contexto1.lineTo(300, 200);  /*Eje x eje y*/ 
+                contexto1.lineTo(600, 0);  /*Eje x eje y*/
+                contexto1.stroke();
+
+            }
+
+            function dibujarCirculo() {
+
+                var canvasvar1 = document.getElementById("canvas1"); 
+                var contexto1 = canvasvar1.getContext("2d"); contexto1.beginPath(); 
+                contexto1.arc(300, 100, 80, 0, 2 * Math.PI);/*Eje x, eje y, radio, inicio de la circunferencia (0) y final de la circunferencia(2*PI) 
+                                                            (2*Math.PI*R es la longitud completa de la circunferencia*/ 
+                contexto1.stroke();
+
+            }
+
+            function dibujarTexto() {
+
+                var canvasvar1 = document.getElementById("canvas1"); 
+                var contexto1 = canvasvar1.getContext("2d"); 
+                contexto1.font = "30px Arial"; 
+                contexto1.fillText("Hola a la clase de DAW", 100, 100);
+                
+            }
+
+            function imagen() {
+
+                var canvasvar1 = document.getElementById("canvas1"); 
+                var contexto1 = canvasvar1.getContext("2d"); 
+                var imagen1 = document.getElementById("kamelot1"); 
+                contexto1.drawImage(imagen1, 45, 45);
+
+            }
+
+
+        </script>
+    </head>
+    <body>
+
+        <h2> CANVAS </h2>
+
+        <canvas id="canvas1" class="clasecanvas1" width="600" height="400"> 
+
+        </canvas>
+        <br>
+
+        <img id="kamelot1" src="img/kamelot1.jpg" alt="El chico de los pelotes" title="El chico de los pelotes">
+
+        <button onclick="dibujarLinea()"> Dibujar Sobre </button>
+        <button onclick="dibujarTexto()"> Dibujar Texto</button>
+        <button onclick="dibujarCirculo()"> Dibujar Circulo </button>
+        <button onclick="imagen()"> Imágen </button>
+    </body>
+</html>
