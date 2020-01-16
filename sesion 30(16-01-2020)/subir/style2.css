@@ -1,14 +1,15 @@
-.contenedorGridLinea, .contenedorGrid {
+.contenedorGridTemplateRows, .contenedorGridTemplateColumns, .contenedorGridLinea, .contenedorGrid {
   grid-template-columns: auto auto auto;
   background-color: #2196F3;
+  box-sizing: border-box;
   padding: 10px;
   column-gap: 10px;
   row-gap: 10px;
 }
 
-.contenedorGridLinea__elementoGrid, .contenedorGrid__elementoGrid7, .contenedorGrid__elementoGrid2, .contenedorGrid__elementoGrid {
+.contenedorGridTemplateRows__elementoGrid, .contenedorGridTemplateColumns__elementoGrid, .contenedorGridLinea__elementoGrid, .contenedorGrid__elementoGrid7, .contenedorGrid__elementoGrid2, .contenedorGrid__elementoGrid {
   background-color: rgba(255, 255, 255, 0.8);
-  border: 2px solid rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
   font-size: 30px;
   text-align: center;
@@ -30,6 +31,18 @@
 
 .contenedorGridLinea {
   display: inline-grid;
+}
+.contenedorGridTemplateColumns {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  box-sizing: border-box;
+  gap: 0;
+}
+.contenedorGridTemplateRows {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  gap: 0;
+  grid-template-rows: 200px 300px 200px;
 }
 
 /*# sourceMappingURL=style2.css.map */

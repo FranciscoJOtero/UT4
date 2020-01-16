@@ -2,6 +2,7 @@
 
     grid-template-columns: auto auto auto;
     background-color: #2196F3;
+    box-sizing: border-box;
     padding: 10px;
     column-gap: 10px;
     row-gap: 10px;
@@ -11,7 +12,7 @@
 %elemento {
 
     background-color: rgba(255,255,255,0.8);
-        border: 2px solid rgba(0,0,0,0.8);
+        border: 1px solid rgba(0,0,0,0.8);
         padding: 20px;
         font-size: 30px;
         text-align: center;
@@ -56,6 +57,38 @@
     display: inline-grid;
     @extend %contenedor;
     
+
+    &__elementoGrid {
+
+        @extend %elemento;
+
+    }
+
+}
+
+.contenedorGridTemplateColumns {
+
+    display: grid;
+    @extend %contenedor;
+    grid-template-columns: repeat(5,20%);
+    box-sizing: border-box;
+    gap: 0;
+
+    &__elementoGrid {
+
+        @extend %elemento;
+
+    }
+
+}
+
+.contenedorGridTemplateRows {
+
+    display: grid;
+    @extend %contenedor;
+    grid-template-columns: repeat(5,20%);
+    gap: 0;
+    grid-template-rows: 200px 300px 200px;
 
     &__elementoGrid {
 
