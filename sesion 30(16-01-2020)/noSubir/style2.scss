@@ -1,0 +1,66 @@
+%contenedor {
+
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+    column-gap: 10px;
+    row-gap: 10px;
+
+}
+
+%elemento {
+
+    background-color: rgba(255,255,255,0.8);
+        border: 2px solid rgba(0,0,0,0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+
+}
+
+.contenedorGrid {
+
+    display: grid;
+    @extend %contenedor;
+
+
+    &__elementoGrid {
+
+        @extend %elemento;
+
+    }
+
+    &__elementoGrid2 {
+
+        @extend %elemento;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+
+
+    }
+
+    &__elementoGrid7 {
+
+        @extend %elemento;
+        grid-column-start: 3;
+        grid-column-end: 4;
+
+    }
+
+}
+
+.contenedorGridLinea {
+
+    display: inline-grid;
+    @extend %contenedor;
+    
+
+    &__elementoGrid {
+
+        @extend %elemento;
+
+    }
+
+}
