@@ -1,0 +1,23 @@
+.contenedorJustifyContent {
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  box-sizing: border-box;
+  padding: 10px;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.contenedorJustifyContent__elementoHijo {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.contenedorJustifyContent {
+  display: grid;
+  justify-content: end;
+}
+
+/*# sourceMappingURL=style3.css.map */
